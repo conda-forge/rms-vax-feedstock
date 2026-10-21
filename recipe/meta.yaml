@@ -1,18 +1,18 @@
 {% set name = "rms-vax" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rms_vax-{{ version }}.tar.gz
-  sha256: 7e83e7461e5a7d5d765225220bfd8e27242b5f20838d930bf3665d9ef66211b0
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/rms_vax-{{ version }}.tar.gz
+  sha256: 5fc6a93081add9a07c26e9fe6739f1415886ed169978e35b657f75da3c7b51e4
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
